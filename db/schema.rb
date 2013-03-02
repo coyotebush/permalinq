@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222024848) do
+ActiveRecord::Schema.define(:version => 20130302213846) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "location"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -19,5 +28,22 @@ ActiveRecord::Schema.define(:version => 20130222024848) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "relevances", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "relevances", ["event_id"], :name => "index_relevances_on_event_id"
+  add_index "relevances", ["project_id"], :name => "index_relevances_on_project_id"
 
 end
