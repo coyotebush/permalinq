@@ -1,0 +1,15 @@
+<div class="event well">
+
+  <h3><%= link_to event.name, event %></h3>
+
+  <div class="info">
+    <div><%= event.date %></div>
+    <div><%= event.location %></div>
+  </div>
+
+  <div class="photos">
+    <% 3.times do %>
+      <img src="http://lorempixel.com/g/160/120/nature">
+    <% end %>
+  </div>
+</div>

@@ -1,19 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
+<h1><%= @project.name %></h1>
 
 <p>
-  <b>Description:</b>
   <%= @project.description %>
 </p>
 
-<% @project.events.each do |event| %>
-	<p><%= event.name %></p>
-<% end %>
-
+<%= render :partial => "event", :collection => @project.events %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
