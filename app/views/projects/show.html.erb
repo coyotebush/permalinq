@@ -6,7 +6,8 @@
   <%= @project.description %>
 </p>
 
-<%= render :partial => "event", :collection => @project.events %>
+<p><%= link_to 'New event', new_event_path, :class => 'btn' %></p>
+<%= render :partial => "event", :collection => @events %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
