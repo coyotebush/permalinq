@@ -3,7 +3,7 @@ Permalinq::Application.routes.draw do
   resources :projects
   resources :pages
 
-  root :to => 'projects#index'
+  root :to => 'events#index'
 
 
   # The priority is based upon order of creation:
