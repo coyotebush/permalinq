@@ -42,7 +42,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
-              <% Project.all.each do |project| %>
+              <% @projects.each do |project| %>
                 <%= content_tag :li, link_to(project.name, project),
                   :class => "active" if current_page?(project) %>
               <% end %>
