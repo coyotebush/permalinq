@@ -44,7 +44,7 @@
               <li class="nav-header">Projects</li>
               <% @projects.each do |project| %>
                 <%= content_tag :li, link_to(project.name, project),
-                  :class => "active" if current_page?(project) %>
+                  :class => ("active" if current_page?(project)) %>
               <% end %>
             </ul>
           </div><!--/.well -->
