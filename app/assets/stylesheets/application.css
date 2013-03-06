@@ -11,6 +11,3 @@
  *= require_self
  *= require_tree .
  */
-textarea.text_area {
-	height: 100px;
-}
