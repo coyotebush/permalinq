@@ -1,4 +1,4 @@
-<div class="event well">
+<div class="event">
 
   <h3><%= link_to event.name, event %></h3>
 
@@ -7,9 +7,11 @@
     <div><%= event.location %></div>
   </div>
 
-  <div class="photos">
+  <ul class="photos thumbnails">
     <% 3.times do %>
-      <img src="http://lorempixel.com/g/160/120/nature">
+      <li class="span4">
+        <img src="http://lorempixel.com/g/240/180/nature" class="img-rounded">
+      </li>
     <% end %>
-  </div>
+  </ul>
 </div>
