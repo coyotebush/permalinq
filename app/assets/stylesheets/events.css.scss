@@ -4,6 +4,14 @@
   &:nth-child(odd) {
     background-color: rgb(249, 249, 249);
   }
+  &.future {
+    .date {
+      font-weight: bold;
+    }
+    .photos li {
+      display: none;
+    }
+  }
   h3 {
     float: left;
     margin-top: 0;

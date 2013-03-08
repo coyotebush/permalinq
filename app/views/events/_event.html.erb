@@ -1,11 +1,12 @@
-<div class="event">
+<%= content_tag :div, :class => ['event', ('future' if event.future?)] do %>
 
   <h3><%= link_to event.name, event %></h3>
 
   <div class="info">
-    <div><%= l event.date, :format => :long %></div>
+    <div class="date"><%= l event.date, :format => :long %></div>
     <div><%= event.location %></div>
   </div>
+
 
   <ul class="photos thumbnails">
     <% 3.times do %>
@@ -14,4 +15,4 @@
       </li>
     <% end %>
   </ul>
-</div>
+<% end %>
