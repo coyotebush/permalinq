@@ -1,7 +1,6 @@
 Permalinq::Application.routes.draw do
   resources :events
   resources :projects
-  resources :pages
 
   root :to => 'events#index'
 
