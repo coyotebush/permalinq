@@ -11,14 +11,16 @@
   <div class="homesec">
     <h2>Recent</h2>
     <% @recent_events.each do |event| %>
-      <div class="homebox row-fluid">
-        <div class="span8">
-          <h3><%= link_to event.name, event %></h3>
-          <p><%= l event.date, :format => :long %></p>
+      <div class="homebox">
+        <div class="row-fluid">
+          <div class="span8">
+            <h3><%= link_to event.name, event %></h3>
+            <p><%= l event.date, :format => :long %></p>
+          </div>
+          <div class="span4">
+            <img src="http://lorempixel.com/160/120/nature" class="img-rounded">
+          </div>
         </div>
-        <div class="span4">
-        <img src="http://lorempixel.com/160/120/nature">
-      </div>
       </div>
     <% end %>
   </div>
