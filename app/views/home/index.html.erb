@@ -1,0 +1,45 @@
+<div class="span6">
+  <div class="homesec">
+    <h2>Upcoming</h2>
+    <% @upcoming_events.each do |event| %>
+      <div class="homebox">
+        <h3><%= link_to event.name, event %></h3>
+        <p><%= l event.date, :format => :long %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="homesec">
+    <h2>Recent</h2>
+    <% @recent_events.each do |event| %>
+      <div class="homebox row-fluid">
+        <div class="span8">
+          <h3><%= link_to event.name, event %></h3>
+          <p><%= l event.date, :format => :long %></p>
+        </div>
+        <div class="span4">
+        <img src="http://lorempixel.com/160/120/nature">
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="span6">
+  <div class="homesec">
+    <h2>Projects</h2>
+    <% @top_projects.each do |project| %>
+      <div class="homebox">
+        <h3><%= link_to project.name, project %></h3>
+        <p><%= truncate(project.description, :length => 100, :separator => ' ') %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="homesec">
+    <h2>Related</h2>
+    <% @related_projects.each do |project| %>
+      <div class="homebox">
+        <h3><%= link_to project[:group], '#' %> / <%= link_to project[:name], '#' %></h3>
+        <p><%= project[:description] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

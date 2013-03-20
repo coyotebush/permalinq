@@ -1,0 +1,12 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.homesec {
+  margin-bottom: 40px;
+}
+.homebox {
+  border-top: 1px solid rgb(221, 221, 221);
+  &:nth-of-type(odd) {
+    background-color: rgb(249, 249, 249);
+  }
+}
